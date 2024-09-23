@@ -17,18 +17,22 @@ const Cart = ({ cartItems, removeFromCart, updateQuantity }) => {
                 <div>
                   <h2 className="text-xl text-orange-500 italic font-sans font-semibold">{item.title}</h2>
                   <p className="text-xl text-red-800 font-sans">Price per Product: {(item.price * 82).toFixed(0)} ₹</p>
-                  <div className="flex items-center  font-mono font-extrabold">
-                    <button onClick={() => updateQuantity(item.id, -1)}>-</button>
-                    <span className="px-4 font-semibold">{item.quantity}</span>
-                    <button onClick={() => updateQuantity(item.id, 1)}>+</button>
-                  </div>
+                  
                   <p>Total for this Product: {(item.price * item.quantity * 82).toFixed(0)} ₹</p> 
                 </div>
               </div>
+              <div className="flex items-center  font-mono font-extrabold gap-4 ">
+                    <button onClick={() => updateQuantity(item.id, -1)}className="bg-gray-500 hover:bg-red-600 text-white px-2 py-1 rounded">-</button>
+                    <span className="px-4 font-semibold">{item.quantity}</span>
+                    <button onClick={() => updateQuantity(item.id, 1)}className="bg-gray-500 hover:bg-green-600 text-white px-2 py-1 rounded">+</button>
+                     
+
               <button className="bg-red-600 hover:bg-red-700 text-white p-2 rounded" onClick={() => removeFromCart(item.id)}>
                 Remove
               </button>
-            </div>
+              </div>
+               </div> 
+            
           ))}
           <div className="mt-6">
             <h2 className="text-2xl font-bold border-b-2 mb-4 p-4">Price Details:</h2>
