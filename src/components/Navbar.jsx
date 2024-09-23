@@ -37,7 +37,7 @@ const Navbar = ({ cartCount }) => {
             🏠 Home
           </Link>
           <Link to="/cart" className="text-orange-800 text-xl hover:bg-orange-600" onClick={toggleMenu}>
-            🛒 Cart ({cartItemCount})
+            🛒 Cart ({cartCount})
           </Link>
         </div>
       )}
