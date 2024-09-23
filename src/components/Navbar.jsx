@@ -12,11 +12,11 @@ const Navbar = ({ cartCount }) => {
     <nav className=" mx-auto shadow-lg hover:cursor-pointer rounded bg-gradient-to-r from-orange-50 to-orange-100 p-8">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <h1 className="text-orange-300 text-4xl italic font-serif hover:underline font-bold hover:text-orange-500 hover:uppercase">Style Spot...</h1>
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-300 text-4xl italic font-serif hover:underline font-bold hover:text-orange-500 hover:uppercase">Style Spot...</h1>
         </div>
         <div className="hidden md:flex space-x-6">
-          <Link to="/" className="text-lime-500 text-2xl hover:italic shadow-lg p-1 mx-4">🏠 Home</Link>
-          <Link to="/cart" className="text-lime-500 text-2xl hover:italic shadow-lg p-1 mx-4">
+          <Link to="/" className="text-orange-700 text-xl hover:text-2xl hover:italic shadow-lg p-1 mx-4">🏠 Home</Link>
+          <Link to="/cart" className="text-orange-700 text-xl hover:text-2xl hover:italic shadow-lg p-1 mx-4">
             🛒 Cart ({cartCount})
           </Link>
         </div>
@@ -25,8 +25,8 @@ const Navbar = ({ cartCount }) => {
             onClick={toggleMenu}
             className="text-black hover:text-gray-300 text-xl focus:outline-none"
           >
-            Menu
-          </button>
+            Menu ☰
+     </button>
         </div>
       </div>
       
