@@ -20,7 +20,7 @@ const ProductCard = ({ product, addToCart, cartItems }) => {
    
           <p className="text-gray-500 mt-2">{product.description.substring(0, 100)}...</p>
    
-          <p className="text-xl font-bold italic mt-2">{(product.price * 82).toFixed(0)} ₹</p> 
+          <p className="text-xl font-bold italic mt-2"> ₹ {(product.price * 82).toFixed(0)} </p> 
       
       <button
         className="mt-2 p-2 bg-orange-400 hover:bg-orange-600 text-white rounded hover:underline hover:italic shadow-lg hover:shadow-md"
